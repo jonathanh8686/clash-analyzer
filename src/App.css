@@ -5,7 +5,7 @@
     height:100vh;  
 }
 
-.rowC{display:flex; flex-direction:row;}
+.rowC{display:flex;}
 
 .midroles {
     max-width: 300px;

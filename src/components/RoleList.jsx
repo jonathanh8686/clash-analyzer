@@ -5,13 +5,18 @@ import "../App.css"
 
 const RoleList = (props) => {
     if (props["clashteam"]["players"] != undefined) {
+        console.log(props["clashteam"]["players"])
         return (
             <div style={{
                 display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
+                justifyContent: "space-evenly",
+                flexWrap: "wrap",
             }} className="rowC">
-                {props["clashteam"]["players"].map((value, index) => <Role name={value.name} key={index} />)}
+
+                {props["clashteam"]["players"].map((value, index) =>
+                    <Role position={value.position} name={value.name} key={index} />
+                )}
+
             </div>
         );
     }

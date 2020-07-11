@@ -11,18 +11,19 @@ import MainPage from "./pages/Index";
 import AboutPage from './pages/About';
 
 
-function App() {
-  return (
-    <div style={{textAlign:"center"}}>
-        <Router>
-            <Switch>
-                <Route exact path="/"><MainPage/></Route>
-                <Route path="/about"><AboutPage/></Route>
-            </Switch>
 
-        </Router>
-    </div>
-  );
+function App() {
+    return (
+        <div style={{textAlign:"center"}}>
+            <Router>
+                <Switch>
+                    <Route exact path="/"><MainPage/></Route>
+                    <Route path="/about"><AboutPage/></Route>
+                </Switch>
+
+            </Router>
+        </div>
+    );
 }
 
 export default App;
