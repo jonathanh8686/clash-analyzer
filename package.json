@@ -2,7 +2,7 @@
   "name": "clash-analyzer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jonathanh8686.github.io/clash-analyzer",
+  "homepage": "http://jonathanh8686.github.io/clash-analyzer/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
