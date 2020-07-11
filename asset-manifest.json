@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/clash-analyzer/static/css/main.45b83166.chunk.css",
-    "main.js": "/clash-analyzer/static/js/main.e9decf18.chunk.js",
-    "main.js.map": "/clash-analyzer/static/js/main.e9decf18.chunk.js.map",
+    "main.js": "/clash-analyzer/static/js/main.985b8a18.chunk.js",
+    "main.js.map": "/clash-analyzer/static/js/main.985b8a18.chunk.js.map",
     "runtime-main.js": "/clash-analyzer/static/js/runtime-main.a09e6271.js",
     "runtime-main.js.map": "/clash-analyzer/static/js/runtime-main.a09e6271.js.map",
     "static/js/2.49e85915.chunk.js": "/clash-analyzer/static/js/2.49e85915.chunk.js",
     "static/js/2.49e85915.chunk.js.map": "/clash-analyzer/static/js/2.49e85915.chunk.js.map",
     "index.html": "/clash-analyzer/index.html",
-    "precache-manifest.ae4f89ae86ac821e64730e366c3a0470.js": "/clash-analyzer/precache-manifest.ae4f89ae86ac821e64730e366c3a0470.js",
+    "precache-manifest.779e76cf0e8c2ea85dda5362186aa890.js": "/clash-analyzer/precache-manifest.779e76cf0e8c2ea85dda5362186aa890.js",
     "service-worker.js": "/clash-analyzer/service-worker.js",
     "static/css/main.45b83166.chunk.css.map": "/clash-analyzer/static/css/main.45b83166.chunk.css.map",
     "static/js/2.49e85915.chunk.js.LICENSE.txt": "/clash-analyzer/static/js/2.49e85915.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a09e6271.js",
     "static/js/2.49e85915.chunk.js",
     "static/css/main.45b83166.chunk.css",
-    "static/js/main.e9decf18.chunk.js"
+    "static/js/main.985b8a18.chunk.js"
   ]
 }
