@@ -3,7 +3,6 @@ import React from 'react';
 import Champions from "./Champions";
 
 const ChampionList = (props) => {
-    console.log(props);
     if (props["gamedata"].length != 0) {
         return (
             <div style={{

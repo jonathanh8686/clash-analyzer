@@ -28,7 +28,7 @@ const UserNameInput = (props) => {
     function handleClick(e) {
 
         let apiIP = "0.0.0.0";
-        //apiIP = "157.245.3.19";
+        apiIP = "157.245.3.19";
 
         setInProg(true);
         fetch('http://' + apiIP + ':5000/api/getuserinfo/' + usr)

@@ -35,11 +35,9 @@ const Champions = (props) => {
         opacity: 1,
         from: { opacity: 0 }
     });
-    console.log(champItems);
 
 
-    if (champItems == undefined) {
-
+    if (champItems == undefined || champItems.length != Object.keys(props["champdata"]["champions"]).length) {
         var ci = Object.keys(props["champdata"]["champions"]).map(function (key) {
             return [key, props["champdata"]["champions"][key]];
         });
@@ -49,8 +47,6 @@ const Champions = (props) => {
         });
 
         setChampItems(ci);
-
-        console.log(champItems);
     }
 
     return (
