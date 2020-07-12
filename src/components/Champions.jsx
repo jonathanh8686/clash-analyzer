@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -20,7 +20,8 @@ import { useSpring, animated } from 'react-spring'
 
 const Champions = (props) => {
 
-    console.log(props);
+    const [champItems, setChampItems] = useState();
+
 
     const springConfig = {
         mass: 100,
@@ -34,6 +35,23 @@ const Champions = (props) => {
         opacity: 1,
         from: { opacity: 0 }
     });
+    console.log(champItems);
+
+
+    if (champItems == undefined) {
+
+        var ci = Object.keys(props["champdata"]["champions"]).map(function (key) {
+            return [key, props["champdata"]["champions"][key]];
+        });
+
+        ci.sort(function (first, second) {
+            return second[1] - first[1];
+        });
+
+        setChampItems(ci);
+
+        console.log(champItems);
+    }
 
     return (
         <div style={{
@@ -56,18 +74,18 @@ const Champions = (props) => {
                     <div>
                         <List>
 
-                            {
-                                Object.keys(props.champdata["champions"]).map((value, index) => 
-                                    <ListItem>
+                            {champItems != undefined &&
+                                champItems.map((value, index) =>
+                                    <ListItem key={index}>
                                         <ListItemAvatar>
-                                            <Avatar src={"https://raw.githubusercontent.com/jonathanh8686/clash-analyzer/master/public/assets/champions/" + value + ".png"}>
+                                            <Avatar src={"https://raw.githubusercontent.com/jonathanh8686/clash-analyzer/master/public/assets/champions/" + value[0] + ".png"}>
 
                                             </Avatar>
                                         </ListItemAvatar>
 
                                         <ListItemText
-                                            primary={value}
-                                            secondary={props.champdata["champions"][value]}
+                                            primary={value[0]}
+                                            secondary={value[1]}
                                         />
                                     </ListItem>)
                             }
