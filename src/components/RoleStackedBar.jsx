@@ -8,7 +8,6 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 const RoleStackedBar = (props) => {
 
     function toggleDataSeries(e) {
-        console.log(e);
         if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
             e.dataSeries.visible = false;
         }
@@ -78,7 +77,6 @@ const RoleStackedBar = (props) => {
     }
 
 
-    console.log(props);
     if (props.gamedata.length != 0) {
 
         for (var i = 0; i < 5; i++) {
@@ -90,7 +88,6 @@ const RoleStackedBar = (props) => {
             }
         }
 
-        console.log(options);
         return (
             <div>
                 <CanvasJSChart options={options} />

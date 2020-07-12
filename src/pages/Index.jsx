@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import UserNameInput from '../components/UserNameInput';
 import RoleList from '../components/RoleList';
 import RoleStackedBar from "../components/RoleStackedBar"
+import ChampionList from '../components/ChampionList';
 
 
 const MainPage = () => {
@@ -18,6 +19,7 @@ const MainPage = () => {
             }} />
             <RoleList clashteam={roledata} />
             <RoleStackedBar gamedata={gamedata} roledata={roledata}/>
+            <ChampionList gamedata={gamedata}/>
 
         </div>
     )

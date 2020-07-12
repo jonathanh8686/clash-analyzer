@@ -18,20 +18,27 @@ const useStyles = makeStyles((theme) => ({
 
 const UserNameInput = (props) => {
     const [usr, setUsr] = useState(' ');
+    const [inprog, setInProg] = useState(false);
+
     const classes = useStyles();
 
-    
-    let progressBar = <div></div>;
+
+
+    let progressBar = true;
     function handleClick(e) {
-        progressBar = <LinearProgress />;
-        fetch('http://0.0.0.0:5000/api/getuserinfo/' + usr)
+
+        let apiIP = "0.0.0.0";
+        //apiIP = "157.245.3.19";
+
+        setInProg(true);
+        fetch('http://' + apiIP + ':5000/api/getuserinfo/' + usr)
             .then(res => res.json())
             .then((d1) => {
-                fetch('http://0.0.0.0:5000/api/getmatchinfo/' + JSON.stringify(d1["players"]))
-                    .then(res => res.json())
+                fetch('http://' + apiIP + ':5000/api/getmatchinfo/' + JSON.stringify(d1["players"]))
+                    .then(res => res.json(''))
                     .then((d2) => {
-                        console.log(d2);
                         props.onChange(d1, d2);
+                        setInProg(false);
                     })
                     .catch(console.log)
             })
@@ -63,9 +70,11 @@ const UserNameInput = (props) => {
                     onClick={handleClick}>Search</Button>
 
 
+
+
             </div>
             <div style={{ flex: "center" }} className={classes.root}>
-                {progressBar}
+                {inprog && <LinearProgress />}
             </div>
         </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
+    HashRouter,
     Route,
     Switch,
     Link,
@@ -15,13 +16,13 @@ import AboutPage from './pages/About';
 function App() {
     return (
         <div style={{textAlign:"center"}}>
-            <Router>
+            <HashRouter basename="/">
                 <Switch>
                     <Route exact path="/"><MainPage/></Route>
                     <Route path="/about"><AboutPage/></Route>
                 </Switch>
 
-            </Router>
+            </HashRouter>
         </div>
     );
 }

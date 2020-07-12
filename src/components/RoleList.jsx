@@ -5,7 +5,6 @@ import "../App.css"
 
 const RoleList = (props) => {
     if (props["clashteam"]["players"] != undefined) {
-        console.log(props["clashteam"]["players"])
         return (
             <div style={{
                 display: "flex",
