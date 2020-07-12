@@ -60,7 +60,8 @@ const Champions = (props) => {
                                 Object.keys(props.champdata["champions"]).map((value, index) => 
                                     <ListItem>
                                         <ListItemAvatar>
-                                            <Avatar>
+                                            <Avatar src={"https://raw.githubusercontent.com/jonathanh8686/clash-analyzer/master/public/assets/champions/" + value + ".png"}>
+
                                             </Avatar>
                                         </ListItemAvatar>
 
